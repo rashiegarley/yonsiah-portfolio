@@ -4,7 +4,7 @@ export default function Hobbies() {
     return (
         <div id="about" class="bg-[#B2B2B2] h-auto my-6 py-8 rounded-lg border-4">
         <div class="flex justify-center">
-          <h3 class="border-4 w-20  border-dashed px-4 py-4">About</h3>
+          <h3 class="border-4 w-25  border-dashed px-4 py-4">Hobbies</h3>
         </div>
 
  <div id="content" class="prose lg:prose-xl px-2">

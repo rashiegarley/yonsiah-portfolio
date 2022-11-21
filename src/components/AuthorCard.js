@@ -1,10 +1,17 @@
 import React, {useState} from "react";
 
-export default function AuthorCard() {
-    const [isActive,setActive] =useState({
-        active: true,
-        name: "education"
+export default function AuthorCard({isActive, setisActive}) {
+  
+  function handleActive(e){
+    e.preventDefault();
+
+    setisActive({
+      active: true,
+      name: e.target.id
     })
+  }
+  
+  
     return (
         <div id="intro" class="bg-[#
             3EAEAEA] h-auto my-6 py-8 rounded-lg border-4">
@@ -20,17 +27,19 @@ export default function AuthorCard() {
                   dolor sit amet consectetur adipisicing elit. Modi asperiores, amet omnis inventore aliquid nam. Autem
                   obcaecati ut ipsa rem temporibus nostrum, quibusdam optio, itaque culpa ad impedit aperiam quasi.</p>
                   <div className="p-6 max-w-full mx-auto">
-                    <ul className="flex justify-center items-center gap-4">
-                        <li className={`border border-gray-500 rounded-lg p-2 ${isActive.active && isActive.name === "education" && 'bg-[#FF8F56]'}`}>
-                            <a href="" id="education" className="font-roboto font-bold text-xl text-[#E7EFF3]">Education</a>
-                        </li>
-                        <li className={`border border-gray-500 rounded-lg p-2 ${isActive.active && isActive.name === "work" && 'bg-[#FF8F56]'}`}>
-                            <a href="" id="work" className="font-roboto  text-xl">Work</a>
-                        </li>
-                        <li className={`border border-gray-500 rounded-lg p-2 ${isActive.active && isActive.name === "hobbies" && 'bg-[#FF8F56]'}`}>
-                            <a href="" id="hobbies" className="font-roboto font- text-xl">Hobbies</a>
-                        </li>
-                    </ul>
+                  <ul className="flex items-center justify-center mx-4px px-2 gap-4">
+                  <li className="border border-[#B2B2B2] p-2 rounded-lg">
+                    <a href="#education" id="education" className={`${isActive.active && isActive.name === "education" && "font-bold bg"} font-lato text-xl`} onClick={handleActive}>Education</a>
+                  </li>
+
+                  <li className="border border-[#B2B2B2] p-2 rounded-lg">
+                    <a href="#work" id="work" className={`${isActive.active && isActive.name === "work" && "font-bold"} font-lato text-xl`} onClick={handleActive}>Work</a>
+                  </li>
+
+                  <li className="border border-[#B2B2B2] p-2 rounded-lg ">
+                    <a href="#hobbies" id="hobbies" className={`${isActive.active && isActive.name === "hobbies" && "font-bold"} font-lato text-xl`} onClick={handleActive}>Hobbies</a>
+                  </li>
+          </ul>
                   </div>
               </div>
             </div>

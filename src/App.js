@@ -5,9 +5,15 @@ import Navbar from './components/Navbar';
 import Work from './components/Work';
 import Education from './components/Education';
 import AuthorCard from './components/AuthorCard';
+import {useState} from "react";
+
 
 
 function App() {
+  const [isActive, setisActive] = useState ({
+    active: true,
+    name: 'education'
+  })
   return (
     <>
      <Navbar />
@@ -18,8 +24,16 @@ function App() {
             {/* <!-- Replace with your content --> */}
 
             {/* <!-- Work --> */}
-          <AuthorCard />
+          <AuthorCard isActive={isActive} setisActive={setisActive} />
 
+            { isActive.active && isActive.name == "education" ? (
+              <Education />
+            ) : isActive.active && isActive.name == "work" ? (
+              <Work />
+            ) : (
+              <Hobbies />
+            )}
+          
             {/* <!-- Work --> */}
            <Work />
 
