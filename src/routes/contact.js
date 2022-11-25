@@ -1,3 +1,7 @@
+import React from "react";
+
+export default function Contact(){
+    return(
 // <!-- ====== Contact Section Start -->
 <section class="bg-white py-20 lg:py-[120px] overflow-hidden relative z-10">
    <div class="container">
@@ -22,9 +26,7 @@
                   GET IN TOUCH WITH US
                </h2>
                <p class="text-base text-body-color leading-relaxed mb-9">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eius tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                  adiqua minim veniam quis nostrud exercitation ullamco
+                 Get the best and affordable sites from us, your satisfaction matters.
                </p>
 
             </div>
@@ -933,3 +935,6 @@
    </div>
 </section>
 // <!-- ====== Contact Section End -->
+
+    )
+    }
