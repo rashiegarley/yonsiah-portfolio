@@ -34,14 +34,6 @@ function App() {
               <Hobbies />
             )}
           
-            {/* <!-- Work --> */}
-           <Work />
-
-            {/* <!-- Education --> */}
-           <Education />
-
-            {/* <!-- Hobbies --> */}
-            <Hobbies />
           </div>
           {/* <!-- /End replace --> */}
 
